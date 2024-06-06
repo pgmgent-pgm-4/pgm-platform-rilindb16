@@ -1,22 +1,43 @@
 {
-  "name": "graphcms-boilerplate",
-  "version": "1.0.0",
-  "description": "GraphCMS Boilerplate",
-  "main": "index.js",
+  "name": "graduaat-platform",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.10.4",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "graphql": "^16.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "sass": "^1.77.2",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "build:client": "cd client && npm install && npm run build",
-    "build:server": "cd server && npm install && npm run build",
-    "build": "npm run build:client && npm run build:server",
-    "start": "cd server && npm run start:build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pgmgent-pgm-4/graphcms-boilerplate.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pgmgent-pgm-4/graphcms-boilerplate/issues"
-  },
-  "homepage": "https://github.com/pgmgent-pgm-4/graphcms-boilerplate#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

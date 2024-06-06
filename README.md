@@ -1,60 +1,70 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/zYbJnoN2)
-# graphcms-boilerplate
+# Getting Started with Create React App
 
-GraphCMS Boilerplate
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Client
+## Available Scripts
 
-Create a new react app with create-react-app named `client`
+In the project directory, you can run:
 
-create `.env`-file
-`.env` file under the client folder with the following content:
+### `npm start`
 
-```
-REACT_APP_NODE_ENV=development
-REACT_APP_HYGRAPH_CONTENT_API=
-REACT_APP_HYGRAPH_ACCESS_TOKEN=e
-REACT_APP_AUTH_KEY_LOCALSTORAGE=react-boilerplate-pgm-4:currentUser
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Seeder
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-`development.env` file under server folder with the following content:
+### `npm test`
 
-```
-NODE_ENV=development
-HYGRAPH_CONTENT_API=
-HYGRAPH_ACCESS_TOKEN=
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Server
+### `npm run build`
 
-`development.env` file under server folder with the following content:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-NODE_ENV=development
-HOST=127.0.0.1
-POST=8080
-JWT_SECRET=
-JWT_EXPIRE=24h
-HYGRAPH_CONTENT_API=
-HYGRAPH_ACCESS_TOKEN=
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Deployment
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Stap 01
+### `npm run eject`
 
-![Render.com | New Web Service](./docs/assets/images/render_stap01.png)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Stap 02
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-![Render.com | New Web Service](./docs/assets/images/render_stap02.png)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### Stap 03
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-![Render.com | New Web Service](./docs/assets/images/render_stap03.png)
+## Learn More
 
-### Stap 04
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-![Render.com | New Web Service](./docs/assets/images/render_stap04.png)
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

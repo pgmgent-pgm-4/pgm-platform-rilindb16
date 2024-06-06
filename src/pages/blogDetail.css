@@ -1,0 +1,38 @@
+.blog-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.blog-detail img {
+    max-width: 50%;
+    height: auto;
+    margin-left: 20px;
+}
+
+.blog-detail h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.blog-detail p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+
+.additional-info {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.additional-info p {
+    font-size: 1em;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: #333;
+}
