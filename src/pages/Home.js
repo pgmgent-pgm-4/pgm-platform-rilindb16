@@ -12,7 +12,7 @@ const Home = () => {
             date: "12/02/2024",
             excerpt: "Voedselverspilling monitoren met slimme camera's en een weegschaal, dat is wat ze in sociaal restaurant Parnassus, personeelsrestaurant De Stroom van de Stad Gent en bij Teamleader het afgelopen half jaar hebben gedaan. Zo kregen ze inzicht in wat mensen weggooien en hoeveel. Gentse horeca-ondernemers kunnen nu gratis zo'n 'food waste monitor' testen dankzij een samenwerking van de Stad Gent en Arteveldehogeschool.",
             content: `In de strijd tegen voedselverspilling stond er de afgelopen zes maanden een 'food waste monitor' in sociaal restaurant Parnassus en de bedrijfsrestaurants van Stad Gent en Teamleader. Die bestaat uit een slimme camera en weegschaal en registreert welk voedsel medewerkers en klanten weggooien en hoeveel. Het gaat bijvoorbeeld om keukenafval, maar ook om voedselresten op de borden. Via een dashboard krijgen de restaurants een overzicht. Het gaat om een onderzoek van Arteveldehogeschool waaraan Stad Gent meewerkt.`,
-            image: require('../assets/GeentseFeesten.png')
+            image: require('../assets/nieuws3.webp')
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ const Home = () => {
             content:`In de VR-filmpjes, die ontwikkeld zijn door onderzoekers van het expertisenetwerk Business en Management, ondervinden leidinggevenden realistische situaties van exclusie, vooroordelen en micro-agressies op de werkvloer. "Nadat ze een bepaalde situatie ervaren hebben, volgt een individuele reflectie en gaan deelnemers een groepsdiscussie aan", zegt onderzoeker Ilse Lievens. "Deze VR-simulatie is voorlopig de enige van haar soort in Vlaanderen."
 
             "Klassieke trainingen om het bewustzijn rond diversity, equity & inclusion (DEI) op de werkvloer te verhogen, werken niet op lange termijn", zegt Wim Van der Linden van HR-dienstverlener Randstad. "Managers onderdompelen in een VR-setting waarin ze discriminatie ervaren, is een beloftevolle methode om wel op lange termijn te sensibiliseren. VR-simulaties spelen in op de persoonlijke aansprakelijkheid van deelnemers."`,
-            image: require('../assets/GeentseFeesten.png')
+            image: require('../assets/nieuws.webp')
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ const Home = () => {
             content: `Op de beursstand etaleert Artevelde Academy zijn aanbod voor professionals in drie thema’s: HR en leiderschap, coachen en begeleiden, en marketing en contentcreatie met AI. 
 
             "Arteveldehogeschool bundelt met Artevelde Academy bijscholingen voor professionals in de socialprofitsector, gezondheid en zorg, onderwijs en profitorganisaties", zegt Bart Haegens, hoofd levenslang leren aan Arteveldehogeschool. "Vormingen op lange termijn kunnen een tweede bachelordiploma, postgraduaat of bachelor-na-bachelor opleveren. Daarnaast zijn er kortlopende vormingen, studiedagen en samenwerkingen, zoals dienstverleningstrajecten, onderzoek, stages en bachelorproefprojecten`,
-            image: require('../assets/GeentseFeesten.png')
+            image: require('../assets/nieuws2.webp')
         }
     ];
 
