@@ -22,18 +22,14 @@ const Blog = () => {
                             <h1>{blog.title}</h1>
                             <p>{blog.date}</p>
                             <p>{blog.excerpt}</p>
+                            <p>{blog.content}</p>
                         </div>
-                        <img src={blog.image} alt="Blog" />
+                        <img src={require(`../assets/${blog.imageUrl}.webp`)} alt="Blog" />
                     </>
                 ) : (
                     <p>Select a blog to read more details.</p>
                 )}
             </div>
-            {blog && (
-                <div className="additional-info">
-                    <p>{blog.content}</p>
-                </div>
-            )}
         </div>
     );
 };

@@ -19,31 +19,31 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData); // Log form data before sending request
-        
-            fetch('http://localhost:3001/login', {
+    
+        fetch('http://localhost:3001/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
-            })
-            .then(response => {
-            console.log('Response status:', response.status); // Log response status
+        })
+        .then(response => {
             if (!response.ok) {
-                console.log('Response not OK'); // Log unsuccessful response
-                throw new Error('Network response was not ok ' + response.statusText);
+                console.log('Response not OK', response.status, response.statusText); // Log unsuccessful response
+                throw new Error(`Network response was not ok: ${response.status} ${response.statusText}`);
             }
             return response.json();
-            })
-            .then(data => {
+        })
+        .then(data => {
             console.log('Success:', data); // Log successful response
-            window.location.href = '../';
-            })
-            .catch(error => {
+            window.location.href = './';
+        })
+        .catch(error => {
             console.error('Error:', error); // Log any errors
             setError('Invalid email or password');
-            });
-        };
+        });
+    };
+    
 
     return (
         <div className="auth-container">

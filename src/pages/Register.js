@@ -9,6 +9,8 @@ const Register = () => {
     role: ''
   });
 
+  const [emailError, setEmailError] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -40,6 +42,9 @@ const Register = () => {
     })
     .catch(error => {
       console.error('Error:', error);
+      if (error.message.includes('already in use')) {
+        setEmailError('This email is already in use. Please use a different email.');
+      }
     });
   };
 
@@ -55,6 +60,7 @@ const Register = () => {
           <div className="auth-group">
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+            {emailError && <p className="error">{emailError}</p>}
           </div>
           <div className="auth-group">
             <label htmlFor="password">Password:</label>
