@@ -281,7 +281,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-
 /* opleiding */
 
 .opleiding-container {
@@ -411,8 +410,6 @@ button:hover {
   background-color: #ececec;
   padding: 4rem 0;
 }
-
-/* App.css */
 
 .grid-container {
   display: flex;
@@ -563,4 +560,17 @@ button:hover {
 .card img {
   width: 300px;
   height: 350px;
+}
+
+.team-list-search {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.team-container-search {
+  display: flex;
+  width: 100%;
 }

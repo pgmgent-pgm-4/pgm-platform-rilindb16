@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, gql } from '@apollo/client';
-import { Helmet } from 'react-helmet'; // Import Helmet
-import '../styles/Team.css'; // Import CSS file for styles
+import { Helmet } from 'react-helmet'; 
+import '../styles/Team.css';
 
 const GET_TEAM = gql`
     query getTeam {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import ThemeSwitch from '../components/ThemeSwitch'; 
-import './NavBar.css';
+import ThemeSwitch from './ThemeSwitch'; 
+import '../styles/NavBar.css';
 
 const NavBar = () => {
   return (

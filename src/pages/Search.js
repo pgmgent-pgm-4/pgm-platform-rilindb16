@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
@@ -43,19 +43,11 @@ const GET_TEAM = gql`
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filter, setFilter] = useState('');
-  const [uniqueFunctions, setUniqueFunctions] = useState([]);
+  const [filter, setFilter] = useState('Blogs');
 
-  const { loading: blogsLoading, data: blogsData } = useQuery(GET_BLOGS);
-  const { loading: projectsLoading, data: projectsData } = useQuery(GET_PROJECTS);
-  const { loading: teamLoading, data: teamData } = useQuery(GET_TEAM);
-  
-  useEffect(() => {
-    if (teamData && teamData.teams) {
-      const functions = [...new Set(teamData.teams.map(member => member.functie.toLowerCase()))];
-      setUniqueFunctions(functions);
-    }
-  }, [teamData]);
+  const { data: blogsData } = useQuery(GET_BLOGS);
+  const { data: projectsData } = useQuery(GET_PROJECTS);
+  const { data: teamData } = useQuery(GET_TEAM);
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -86,7 +78,6 @@ const Search = () => {
           className="search-bar"
         />
         <select value={filter} onChange={handleFilterChange} className="filter-dropdown">
-          <option value="">Alles</option>
           <option value="Blogs">Blogs</option>
           <option value="Projects">Projects</option>
           <option value="Team">Team</option>
@@ -106,7 +97,7 @@ const Search = () => {
           <div className="small-blogs">
             {filteredBlogs && filteredBlogs.slice(1).map(blog => (
               <div key={blog.id} className="small-blog">
-                <img src={require(`../assets/${blog.imageUrl}.webp`)} alt={`Photo${blog.id}`} className='article-image'/>
+                <img src={require(`../assets/${blog.imageUrl}.webp`)} alt='' className='article-image'/>
                 <p>{blog.date}</p>
                 <h3>{blog.title}</h3>
                 <p>{blog.excerpt}</p>
@@ -116,12 +107,11 @@ const Search = () => {
           </div>
         </div>
       )}
-      
       {filter === 'Projects' && (
         <div className="container-section">
           <h1>Projecten</h1>
           <div className="container">
-            {projectsData && projectsData.projects.map(project => (
+            {filteredProjects && filteredProjects.map(project => (
               <article key={project.id} className="article">
                 <img src={require(`../assets/${project.imageUrl}.png`)} alt={project.title} className='article-image'/>
                 <h2 className="article-title">{project.title}</h2>
@@ -134,39 +124,17 @@ const Search = () => {
       )}
 
       {filter === 'Team' && (
-        <div className="team-container">
-          <div className="filter-search-container">
-            <input
-              type="text"
-              placeholder="Zoeken..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-              className="search-bar"
-            />
-            <select value={filter} onChange={handleFilterChange} className="filter-dropdown">
-              <option value="">Alles</option>
-              {uniqueFunctions.map(functie => (
-                <option key={functie} value={functie}>{functie}</option>
-              ))}
-            </select>
-          </div>
-          <div className="team-list">
-            {filteredTeam && filteredTeam.map(group => (
-              <div key={group.functie} className="team-group">
-                <h3>{group.functie}</h3>
-                <div className="team-card-container">
-                  {group.members.map(teamMember => (
-                    <div key={teamMember.id} className="team-card">
-                      {teamMember.url ? (
-                        <img src={require(`../assets/${teamMember.url}.jpg`)} alt={teamMember.naam} className="team-image" />
-                      ) : (
-                        <p>No image available</p>
-                      )}
-                      <h3>{teamMember.naam}</h3>
-                      <p>{teamMember.functie}</p>
-                    </div>
-                  ))}
-                </div>
+        <div className="team-container-search">
+          <div className="team-list-search">
+            {filteredTeam && filteredTeam.map(member => (
+              <div key={member.id} className="team-card">
+                {member.url ? (
+                  <img src={require(`../assets/${member.url}.jpg`)} alt={member.naam} className="team-image" />
+                ) : (
+                  <p>No image available</p>
+                )}
+                <h3>{member.naam}</h3>
+                <p>{member.functie}</p>
               </div>
             ))}
           </div>
@@ -176,4 +144,4 @@ const Search = () => {
   );
 };
 
-export default Search
+export default Search;

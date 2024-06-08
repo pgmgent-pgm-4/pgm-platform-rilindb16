@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
-import "./blogDetail.css";
+import "../styles/blogDetail.css";
 
 const Blog = () => {
     const location = useLocation();

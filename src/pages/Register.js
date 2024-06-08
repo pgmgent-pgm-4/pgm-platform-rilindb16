@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Auth.css';
+import '../styles/Auth.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +8,6 @@ const Register = () => {
     password: '',
     role: ''
   });
-
   const [emailError, setEmailError] = useState('');
 
   const handleChange = (e) => {
@@ -37,7 +36,6 @@ const Register = () => {
     })
     .then(data => {
       console.log('Success:', data);
-      // Navigate to login page after successful registration
       window.location.href = '/login';
     })
     .catch(error => {

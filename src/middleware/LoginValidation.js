@@ -1,4 +1,3 @@
-// src/middleware/loginValidation.js
 const { body } = require('express-validator');
 
 module.exports = [
