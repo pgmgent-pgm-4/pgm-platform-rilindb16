@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const knex = require('knex');
 const bcrypt = require('bcrypt');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 
 const db = knex(require('./knexfile').development);
 const app = express();
@@ -41,14 +42,30 @@ app.post('/register', (req, res) => {
   });
 });
 
+const users = [
+  {
+    id: 4,
+    email: 'bbb@outlook.com',
+    password: 'test',
+    role: 'student'
+  }
+];
+
+// Login endpoint
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
-  console.log('Received email:', email, 'and password:', password);
-  if (email && password) {
-      // Verwerk het verzoek
-      res.status(200).json({ message: 'Login successful' });
+  const user = users.find(u => u.email === email && u.password === password);
+
+  if (user) {
+    // Generate a token
+    const token = jwt.sign({ id: user.id, role: user.role }, 'your_jwt_secret', {
+      expiresIn: '1h'
+    });
+
+    // Send token as a cookie
+    res.cookie('token', token, { httpOnly: true }).json({ token });
   } else {
-      res.status(400).json({ message: 'Invalid email or password' });
+    res.status(401).json({ message: 'Invalid email or password' });
   }
 });
 
